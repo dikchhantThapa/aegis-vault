@@ -8,10 +8,53 @@
 <body>
     <!--    Only pass this data as dynamic content to Layout-->
     <section>
-        <h1>Login page 2</h1>
+
+        <div class = "container mt-5 p-5">  <!--Margin top 5, Padding 5-->
+<!--    <div class = "container m-5 p-5">   Margin-5 on all sides. Footer goes all the way down -->
+            <div class = "row">
+                <div class = "col-md-6 p-3">    <!-- images column -->
+                    <img src = "img/aegis-vault-logo.jpg" width = 95% height = 95% alt = "">
+                </div>
+                <div class = "col-md-6 mt-5 p-5">    <!-- form column -->
+                    <div class = "card">
+                        <div class = "card-header">
+                            <p class = "fs-4 text-center">Log In</p>
+                        </div>
+                        <div class = "card-body">
+                            <form>
+                                <div class = "mb-3">    <!-- margin bottom 3 (size of bottom margin) -->
+                                    <label class = "form-label">Email</label>
+                                    <input class = "form-control" name = "email" type = "email">
+                                </div>
+
+                                <div class = "mb-3">    <!-- margin bottom 3 (size of bottom margin) -->
+                                    <label class = "form-label">Password</label>
+                                    <input class = "form-control" name = "password" type = "password">
+                                </div>
+
+                                <button type = "submit" class = "btn bg-dark text-white col-md-12">Log In</button>
+
+                            </form>
+                        </div>
+
+                        <!-- Card footer start-->
+                        <div class = "card-footer text-center">
+                            <a href = "#" class = "text-decoration-none">Forgot password?</a>
+                            <br>
+                            New to AegisVault?
+                            <a href = "#" class = "text-decoration-none">Create an account</a>
+                        </div>
+
+                        <!-- Card footer end -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </section>
 
-    <h1>Demo</h1>
+
 
 </body>
 </html>

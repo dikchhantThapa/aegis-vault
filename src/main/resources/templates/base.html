@@ -57,10 +57,10 @@
                 ms-auto = Margin Start Auto (right side items on Navbar) --->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"> <i class="bi bi-person"></i> Log In</a>
+                        <a class="nav-link active" aria-current="page" href="/login"> <i class="bi bi-person"></i> Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Register(Sign Up)</a>
+                        <a class="nav-link active" aria-current="page" href="/register">Register(Sign Up)</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Admin</a>
@@ -77,9 +77,14 @@
 
     <!-- End Navbar -->
 
-    <h1>Navbar</h1>
-        <div th:replace="${content}"> </div>
-        <!--    navbar will be fixed, but dynamic content-->
+    <div th:replace="${content}"> </div>
+    <!--    navbar will be fixed, but dynamic content-->
+
+    <!-- Footer Start -->
+    <div class = "container-fluid p-1 bg-dark text-center text-white">
+        <p>AegisVault</p>
+    </div>
+    <!-- Footer End -->
 
 
 </body>
