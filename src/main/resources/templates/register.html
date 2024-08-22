@@ -8,7 +8,99 @@
 <body>
 
     <section>
-        <h1>Registration page</h1>
+        <div class = "container mt-5 p-5">  <!--Margin top 5, Padding 5-->
+            <!--    <div class = "container m-5 p-5">   Margin-5 on all sides. Footer goes all the way down -->
+            <div class = "row">
+                <div class = "col-md-6 p-2">    <!-- images column -->
+                    <img src = "img/aegis-vault-logo.jpg" width = 95% height = 75% alt = "">
+                </div>
+                <div class = "col-md-6 p-2">    <!-- form column -->
+                    <div class = "card">
+                        <div class = "card-header">
+                            <p class = "fs-4 text-center">Register</p>
+                        </div>
+                        <div class = "card-body">
+                            <form>
+
+                                <div class = "row">
+                                    <div class = "col">
+                                        <label class = "form-label">Full Name</label>
+                                        <input class = "form-control" name = "name" type = "text">
+                                    </div>
+
+                                    <div class = "col">
+                                        <label class = "form-label">Phone Number</label>
+                                        <input class = "form-control" name = "phoneNumber" type = "number">
+                                    </div>
+                                </div>
+
+                                <div class = "mb-3">    <!-- margin bottom 3 (size of bottom margin) -->
+                                    <label class = "form-label">Email</label>
+                                    <input class = "form-control" name = "email" type = "email">
+                                </div>
+
+
+                                <div class = "row">
+                                    <div class = "col">
+                                        <label class = "form-label">Address</label>
+                                        <input class = "form-control" name = "address" type = "text">
+                                    </div>
+
+                                    <div class = "col">
+                                        <label class = "form-label">City</label>
+                                        <input class = "form-control" name = "city" type = "text">
+                                    </div>
+                                </div>
+
+                                <div class = "row">
+                                    <div class = "col">
+                                        <label class = "form-label">State</label>
+                                        <input class = "form-control" name = "state" type = "text">
+                                    </div>
+
+                                    <div class = "col">
+                                        <label class = "form-label">Zip code</label>
+                                        <input class = "form-control" name = "zipCode" type = "number">
+                                    </div>
+                                </div>
+
+                                <div class = "row">
+                                    <div class = "col">    <!-- margin bottom 3 (size of bottom margin) -->
+                                        <label class = "form-label">Password</label>
+                                        <input class = "form-control" name = "password" type = "password">
+                                    </div>
+
+                                    <div class = "col">
+                                        <label class = "form-label">Confirm Password</label>
+                                        <input class = "form-control" name = "confirmPassword" type = "password">
+                                    </div>
+                                </div>
+
+
+                                <div class = "mb-3">    <!-- margin bottom 3 (size of bottom margin) -->
+                                    <label class = "form-label">Profile image</label>
+                                    <input class = "form-control" name = "profileImage" type = "file">
+                                </div>
+
+
+                                <button type = "submit"
+                                        class = "btn bg-dark text-white col-md-12">Register</button>
+
+                            </form>
+                        </div>
+
+                        <!-- Card footer start-->
+                        <div class = "card-footer text-center">
+                            Already have an account?
+                            <a href = "/login" class = "text-decoration-none">Log In</a>
+                        </div>
+
+                        <!-- Card footer end -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
 </body>
