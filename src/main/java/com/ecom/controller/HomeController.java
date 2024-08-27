@@ -8,7 +8,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index() {
-        return "index";     // receive index html
+        return "index";     // receive index.html
     }
 
     @GetMapping("/login")
@@ -20,4 +20,11 @@ public class HomeController {
     public String register() {
         return "register";     // register.html
     }
+
+    @GetMapping("/products")
+    public String products() {
+        return "product";     // product.html
+    }
+
+
 }
