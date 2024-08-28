@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base::Layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <section>
+
+ <!--       <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f8f9fa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .dashboard-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                width: 80%;
+                max-width: 1200px;
+            }
+            .dashboard-box {
+                background-color: #343a40;
+                color: #ffffff;
+                padding: 30px;
+                text-align: center;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .dashboard-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .dashboard-box a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 18px;
+            }
+        </style>-->
+
+
+        <div class = "container p-5">
+            <p class = "text-center fs-3 mt-4">Admin Dashboard</p>
+            <div class = "row p-5">
+
+                <div class = "col-md-4 mt-2">
+                    <a href = "#" class = "text-decoration-none">
+                        <div class = "card card-sh">
+                            <div class = "card-body text-center text-primary">
+                                <i class = "fa-solid fa-square-plus fa-3x"></i>
+                                <h4>Add Item</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class = "col-md-4 mt-2">
+                    <a href = "#" class = "text-decoration-none">
+                        <div class = "card card-sh">
+                            <div class = "card-body text-center text-primary">
+                                <i class="fa-solid fa-book-open fa-3x"></i>
+                                <h4>View Item</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class = "col-md-4 mt-2">
+                    <a href = "#" class = "text-decoration-none">
+                        <div class = "card card-sh">
+                            <div class = "card-body text-center text-primary">
+                                <i class="fa-solid fa-gift fa-3x"></i>
+                                <h4>Orders</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class = "col-md-4 mt-5">
+                    <a href = "#" class = "text-decoration-none">
+                        <div class = "card card-sh">
+                            <div class = "card-body text-center text-primary">
+                                <i class="fa-solid fa-users fa-3x"></i>
+                                <h4>Users</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class = "col-md-4 mt-5">
+                    <a href = "#" class = "text-decoration-none">
+                        <div class = "card card-sh">
+                            <div class = "card-body text-center text-primary">
+                                <i class="fa-solid fa-layer-group fa-3x"></i>
+                                <h4>Add Category</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class = "col-md-4 mt-5">
+                    <a href = "#" class = "text-decoration-none">
+                        <div class = "card card-sh">
+                            <div class = "card-body text-center text-primary">
+                                <i class="fa-solid fa-user-plus fa-3x"></i>
+                                <h4>Add Admin</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--<div class="dashboard-container">
+            <div class="dashboard-box">
+                <a href="#">Add Product</a>
+            </div>
+            <div class="dashboard-box">
+                <a href="#">Category</a>
+            </div>
+            <div class="dashboard-box">
+                <a href="#">View Product</a>
+            </div>
+            <div class="dashboard-box">
+                <a href="#">Orders</a>
+            </div>
+            <div class="dashboard-box">
+                <a href="#">User</a>
+            </div>
+            <div class="dashboard-box">
+                <a href="#">Add Admin</a>
+            </div>
+        </div>-->
+
+
+    </section>
+
+</body>
+</html>
