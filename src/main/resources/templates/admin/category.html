@@ -9,8 +9,54 @@
 
     <section>
 
-        <div class = "container">
+        <div class = "container-fluid p-5 mt-5">    <!--container-fluid applies width:100% to the parent element-->
             <div class = "row">
+                <div class = "col-md-3">        <!--col-md-4 is ideal-->
+                    <div class = "card card-sh">
+                        <div class = "card-header text-center fs-4">Add Game(Category)</div>
+                        <div class = "card-body">
+                            <form>
+                                <div class = "mb-3">
+                                    <label>Enter Game</label>
+                                    <input type = "text" class = "form-control">
+                                </div>
+
+                                <div class = "mb-3">
+                                    <label>Upload image</label>
+                                    <input type = "file" class = "form-control">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-8">
+                    <div class = "card card-sh">
+                        <div class = "card-header text-center fs-4">Game Details</div>
+                        <div class = "card-body">
+                            <table class="table">       <!--table from Bootstrap-->
+                                <thead>
+                                <tr>
+                                    <th scope="col">Serial Number</th>
+                                    <th scope="col">Game</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>
