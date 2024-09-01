@@ -43,7 +43,7 @@ public class AdminController {
         // if game exists
         Boolean existCategory = categoryService.existCategory(category.getName());
         if (existCategory) {
-            session.setAttribute("errorMsg", "Item name already exists");
+            session.setAttribute("errorMsg", "Game name already exists");
         }   else {
             Category saveCategory = categoryService.saveCategory(category);
             // if empty, give error
@@ -54,7 +54,7 @@ public class AdminController {
             }
         }
 
-        return "redirect:/category";
+        return "redirect:/admin/category";
     }
 
 }

@@ -13,9 +13,32 @@
             <div class = "row">
                 <div class = "col-md-3">        <!--col-md-4 is ideal-->
                     <div class = "card card-sh">
-                        <div class = "card-header text-center fs-4">Add Game(Category)</div>
+                        <div class = "card-header text-center">
+                            <p class = "fs-4"> Add Game(Category) </p>
+
+                 <!--           <th:block th:if = "${session.successMsg}">
+                                <p class = "text-success fw-bold">[[${session.successMsg}]]</p>
+                            </th:block>
+
+                            <th:block th:if = "${session.errorMsg}">
+                                <p class = "text-danger fw-bold">[[${session.errorMSg}]]</p>
+                            </th:block>-->
+
+                            <th:block th:if="${session.successMsg}">
+                                <p class="text-success fw-bold">[[${session.successMsg}]]</p>
+                                <!--<th:block th:text="${@CommonServiceImpl}"></th:block>-->
+                                <th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+
+                            </th:block>
+
+                            <th:block th:if="${session.errorMsg}">
+                                <p class="text-danger fw-bold">[[${session.errorMsg}]]</p>
+                                <th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+                            </th:block>
+
+                        </div>
                         <div class = "card-body">
-                            <form action = "/admin/saveCategory" method = "post">
+                            <form action = "/admin/saveCategory" method = "post" enctype="multipart/form-data">
                                 <div class = "mb-3">
                                     <label>Enter Game</label>
                                     <input type = "text" name = "name" class = "form-control">
@@ -25,13 +48,15 @@
                                     <label>Status</label>
                                     <!-- radio button from bootstrap -->
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" checked name="isActive" id="flexRadioDefault1">
+                                        <input class="form-check-input" type="radio" checked value = "true" name="isActive"
+                                               id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             Active
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="isActive" id="flexRadioDefault2">
+                                        <input class="form-check-input" type="radio" name="isActive"
+                                               value = "false" id="flexRadioDefault2">
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             Inactive
                                         </label>
