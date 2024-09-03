@@ -1,16 +1,3 @@
-//package com.ecom.service.impl;
-//
-//import com.ecom.model.UserDtls;
-//import com.ecom.service.UserService;
-//
-//public class UserServiceImpl implements UserService {
-//    @Override
-//    public UserDtls saveUser(UserDtls user) {
-//        return null;
-//    }
-//}
-
-
 package com.ecom.service.impl;
 
 import java.io.File;
@@ -32,16 +19,13 @@ import org.springframework.web.multipart.MultipartFile;
 import com.ecom.model.UserDtls;
 import com.ecom.repository.UserRepository;
 import com.ecom.service.UserService;
-//import com.ecom.util.AppConstant;
+
 
 @Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
-
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDtls saveUser(UserDtls user) {

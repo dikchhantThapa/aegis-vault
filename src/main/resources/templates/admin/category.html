@@ -26,7 +26,6 @@
 
                             <th:block th:if="${session.successMsg}">
                                 <p class="text-success fw-bold">[[${session.successMsg}]]</p>
-                                <!--<th:block th:text="${@CommonServiceImpl}"></th:block>-->
                                 <th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
 
                             </th:block>
