@@ -96,14 +96,15 @@
                                     <th scope="row">[[${c.count}]]</th>
                                     <td>[[${cat.name}]]</td>
                                     <td>[[${cat.isActive}]]</td>
+                                    <!-- load image -->
                                     <td><img th:src="@{'/img/category_img/'+${cat.imageName}}"
-                                             width = "50px" height = "50px"></td>
+                                             width = "60px" height = "60px"></td>
                                     <td>
                                         <!-- edit and delete -->
                                         <a href = "#" class = "btn btn-primary btn-sm">
-                                            <i class="fa-regular fa-pen-to-square fa-1x">Edit</i></a>
-                                        <a href = "#" class = "btn btn-danger btn-sm">
-                                            <i class="fa-regular fa-trash-can fa-1x">Delete</i>
+                                            <i class="fa-regular fa-pen-to-square">Edit</i></a>
+                                        <a th:href = "@{'/admin/deleteCategory/' + ${cat.id}}" class = "btn btn-danger btn-sm">
+                                            <i class="fa-regular fa-trash-can">Delete</i>
                                         </a>
                                     </td>
                                 </tr>

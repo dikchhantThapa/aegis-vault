@@ -5,6 +5,7 @@ import com.ecom.repository.CategoryRepository;
 import com.ecom.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import java.util.List;
 
@@ -22,6 +23,19 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<Category> getAllCategory() {
         return categoryRepository.findAll();
+    }
+
+    @Override
+    public Boolean deleteCategory(int id) {
+        // if id not found, return null(return false)
+        Category category = categoryRepository.findById(id).orElse(null);
+
+        // if that game is in the DB (not null)
+        if(!ObjectUtils.isEmpty(category)) {
+            categoryRepository.delete(category);
+            return true;    // sends true (already deleted) to Admin Controller
+        }
+        return null;
     }
 
     @Override

@@ -79,4 +79,15 @@ public class AdminController {
         return "redirect:/admin/category";
     }
 
+    @GetMapping("/deleteCategory/{id}")     // delete particular game(category)
+    public String deleteCategory(@PathVariable int id, HttpSession session) {
+        Boolean deleteCategory = categoryService.deleteCategory(id);
+        if (deleteCategory) {
+            session.setAttribute("successMsg", "game successfully deleted!");
+        }   else {
+            session.setAttribute("errorMsg", "oops! something went wrong!");
+        }
+        return "redirect:/admin/category";
+    }
+
 }
