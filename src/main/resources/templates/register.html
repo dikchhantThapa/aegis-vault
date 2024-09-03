@@ -16,21 +16,33 @@
                 </div>
                 <div class = "col-md-6 p-2">    <!-- form column -->
                     <div class = "card">
-                        <div class = "card-header">
+                        <div class = "card-header text-center">
                             <p class = "fs-4 text-center">Register</p>
+
+                            <!-- session message -->
+                            <th:block th:if="${session.successMsg}">
+                                <p class="text-success fw-bold">[[${session.successMsg}]]</p>
+                                <th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+                            </th:block>
+
+                            <th:block th:if="${session.errorMsg}">
+                                <p class="text-danger fw-bold">[[${session.errorMsg}]]</p>
+                                <th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+                            </th:block>
+
                         </div>
                         <div class = "card-body">
-                            <form>
+                            <form action = "/saveUser" enctype="multipart/form-data" method="post">
 
                                 <div class = "row">
                                     <div class = "col">
                                         <label class = "form-label">Full Name</label>
-                                        <input class = "form-control" name = "name" type = "text">
+                                        <input required class = "form-control" name = "name" type = "text">
                                     </div>
 
                                     <div class = "col">
                                         <label class = "form-label">Phone Number</label>
-                                        <input class = "form-control" name = "phoneNumber" type = "number">
+                                        <input required class = "form-control" name = "phoneNumber" type = "number">
                                     </div>
                                 </div>
 
@@ -43,43 +55,44 @@
                                 <div class = "row">
                                     <div class = "col">
                                         <label class = "form-label">Address</label>
-                                        <input class = "form-control" name = "address" type = "text">
+                                        <input required class = "form-control" name = "address" type = "text">
                                     </div>
 
                                     <div class = "col">
                                         <label class = "form-label">City</label>
-                                        <input class = "form-control" name = "city" type = "text">
+                                        <input required class = "form-control" name = "city" type = "text">
                                     </div>
                                 </div>
 
                                 <div class = "row">
                                     <div class = "col">
                                         <label class = "form-label">State</label>
-                                        <input class = "form-control" name = "state" type = "text">
+                                        <input required class = "form-control" name = "state" type = "text">
                                     </div>
 
                                     <div class = "col">
                                         <label class = "form-label">Zip code</label>
-                                        <input class = "form-control" name = "zipCode" type = "number">
+                                        <input required class = "form-control" name = "zipCode" type = "number">
                                     </div>
                                 </div>
 
                                 <div class = "row">
                                     <div class = "col">    <!-- margin bottom 3 (size of bottom margin) -->
                                         <label class = "form-label">Password</label>
-                                        <input class = "form-control" name = "password" type = "password">
+                                        <input required class = "form-control" name = "password" type = "password">
                                     </div>
 
                                     <div class = "col">
                                         <label class = "form-label">Confirm Password</label>
-                                        <input class = "form-control" name = "confirmPassword" type = "password">
+                                        <input required class = "form-control" name = "confirmPassword" type = "password">
                                     </div>
                                 </div>
 
 
                                 <div class = "mb-3">    <!-- margin bottom 3 (size of bottom margin) -->
                                     <label class = "form-label">Profile image</label>
-                                    <input class = "form-control" name = "profileImage" type = "file">
+                                    <input class = "form-control" name = "img" type = "file">
+                                    <!--<input class = "form-control" name = "profileImage" type = "file">-->
                                 </div>
 
 
